@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Словник</h2>
+        <div id="card" class="card">Завантаження...</div>
+        <input type="text" id="input" placeholder="Введи переклад">
+        <div id="message" class="message"></div>
+        <button id="check">Перевірити</button>
+        <div id="step" class="step">Слово 1 з 10</div>
+        <div id="stats" class="stats">
+            Вірно: <span id="correct">0</span> | Невірно: <span id="wrong">0</span>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Результат</h3>
+            <p>Правильних відповідей: <span id="m-correct">0</span> з <span id="m-total">0</span></p>
+            <p>Неправильних відповідей: <span id="m-wrong">0</span></p>
+            <p>Успішність: <span id="percent">0%</span></p>
+            <p id="level"></p>
+            <button id="close">Закрити</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
