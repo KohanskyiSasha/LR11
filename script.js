@@ -127,6 +127,7 @@ $(document).ready(function() {
         loadWords();
     }
     
+    // Обробники подій
     $check.on('click', checkTranslation);
     
     $input.on('keypress', function(e) {
@@ -135,10 +136,17 @@ $(document).ready(function() {
         }
     });
     
-    $close.add($closeBtn).on('click', function() {
+    // Додаємо обробник для кнопки "Закрити"
+    $close.on('click', function() {
         restart();
     });
     
+    // Додаємо обробник для хрестика
+    $closeBtn.on('click', function() {
+        restart();
+    });
+    
+    // Додаємо обробник для кліку поза модальним вікном
     $(window).on('click', function(e) {
         if ($(e.target).is($modal)) {
             restart();
